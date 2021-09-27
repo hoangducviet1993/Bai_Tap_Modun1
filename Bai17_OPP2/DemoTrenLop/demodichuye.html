@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình tròn</title>
+</head>
+<canvas id="myCanvas" width="300" height="500" style="border: 1px solid ">
+</canvas>
+<button onclick="moveSquare()">Nhấn di chuyển</button>
+<body>
+<script>
+    class Circle {
+        x;
+        y;
+        radius;
+        color;
+        speedX;
+        speedY;
+
+        constructor(x, y, radius, color, speedX, speedY) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.speedX = speedX;
+            this.speedY = speedY;
+
+
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+
+        daw(ctx) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        moveLeft() {
+            this.x += this.speedX;
+        }
+
+        moveDown() {
+            // this.y += 1;
+            // if (this.y === 500) {
+            //     this.y = 0
+            // }
+            this.y += this.speedY;
+
+        }
+
+        check() {
+            if (this.y < 0 || this.y > 500 - this.radius) {
+                this.speedY = -this.speedY;
+            }
+            if (this.x < 0 || this.x > 300 - this.radius) {
+                this.speedX = -this.speedX;
+            }
+
+        }
+    }
+
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let circle = new Circle(50, 50, 30, "red", 2, 3);
+    moveSquare() // thêm hàm tự động di chuyển
+    function moveSquare() {
+        ctx.clearRect(0, 0, 300, 500);
+        circle.moveDown();
+        circle.moveLeft();
+        circle.check()
+        circle.daw(ctx)
+        // setTimeout(moveSquare,200); // thêm hàm tự động di chuyển
+        requestAnimationFrame(moveSquare)
+
+    }
+</script>
+
+</body>
+</html>

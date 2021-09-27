@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        table, th, td {
+            border: 0px solid black;
+            padding: 10px;
+        }
+        table {
+            border-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+<from>
+    <table>
+        <tr>
+            <td><H3>Amount</H3></td>
+            <td><h3>From Currency</h3></td>
+            <td><h3>To Currency</h3></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="dauvao" value="1" > </td>
+            <td>
+                <select name="tiente2" id="$1" >
+                    <option value="VND"> VN Đồng</option>
+                    <option value="NDT"> Nhân dân tệ</option>
+                    <option value="US"> USD</option>
+            </select>
+            </td>
+            <td>
+                <select name="tiente2" id="$2" >
+                <option value="VND"> VN Đồng</option>
+                <option value="NDT"> Nhân dân tệ</option>
+                <option value="US"> USD</option>
+            </select>
+            </td>
+            <td>
+                <button onclick="chuyendoi()"> Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td><h1 id="hienthigiatri"> Result:0 </h1></td>
+        </tr>
+    </table>
+    <script src="BT-Ungdungchuyendoitiente.js"></script>
+</from>
+</body>
+</html>

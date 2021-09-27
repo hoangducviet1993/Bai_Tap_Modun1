@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Calulator</h1>
+<input type="text" id="st1">
+<input type="text" id="st2">
+
+<button onclick="calulator('+')" >+</button>
+<button onclick="calulator('-')" >-</button>
+<button onclick="calulator('*')" >*</button>
+<button onclick="calulator('/')" >/</button>
+<p id="rs">
+    Result:
+</p>
+<script>
+        function calulator(cal){
+            let st1 = document.getElementById('st1').value;
+            let st2 = document.getElementById('st2').value;
+     document.getElementById('rs').innerText = eval(st1 + cal + st2)
+        }
+</script>
+</body>
+</html>

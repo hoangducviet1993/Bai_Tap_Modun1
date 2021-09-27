@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị số chia hết cho 5 trong dãy fibonacci </title>
+</head>
+<body>
+<script>
+
+    let insert = parseInt(prompt("Nhập số lượng cần thiển thị:"));
+    let a = 0;
+    let b = 1;
+    document.write('Dãy số cần tìm là:' + '<br>')
+    let count = 0;
+    while (count < insert) {
+        if (b % 5 === 0) {
+            document.write(b + "<br>");
+            count++;
+        }
+        let c = a + b;
+        a = b;
+        b = c;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = parseInt(prompt("Nhập số"));
+    for (let a = 0; a < 100 ; a++) {
+        if (a % 3 === 0 ){
+            if (a%5===0){
+                document.write( a+ "FizzBuzz"+"<br>");
+            }else {
+                document.write(a+ "Fizz"+"<br>");
+            }
+        }else if(a %5 ===0){
+            document.write(a+"Buzz"+"<br>")
+        } else {
+            document.write(a+"<br>")
+        }
+    }
+
+</script>
+</body>
+</html>

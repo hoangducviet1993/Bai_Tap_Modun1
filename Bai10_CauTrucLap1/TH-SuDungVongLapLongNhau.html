@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    let bang;
+    bang = '<table border="1">';
+    for (a = 1; a <= 10; a++) {
+        bang = bang + '<tr>';
+        for (b = 1; b <= 10; b++) {
+            bang = bang + '<td>' + (a + " x " + b + " = " + a * b) + '</td>';
+        }
+        bang = bang + "</tr>";
+    }
+    bang = bang + '</table>';
+    document.write(bang);
+</script>
+<script>
+    let bang;
+    a = b = 1
+    bang = '<table border="1">';
+    while (a <= 10) {
+        bang = bang + '<tr>';
+        while (b <= 10) {
+            bang = bang + '<td>' + (a + " x " + b + " = " + a * b) + '</td>';
+            b++;
+        }
+        bang = bang + "</tr>";
+        b = 1
+        a++;
+    }
+    bang = bang + '</table>';
+    document.write(bang);
+</script>
+
+
+</body>
+</html>

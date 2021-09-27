@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phuong trình Lãi Kép</title>
+</head>
+<body>
+<input type="text" id="money" placeholder="Nhập tiền gửi vào:">
+<input type="text" id="lai" placeholder="Nhập lãi tháng:">
+<input type="text" id="month" placeholder="Nhập sô tháng cần tính">
+<button onclick="convert()" >Chuyển đổi</button>
+<h1 id="res">Result:0</h1>
+<script>
+    function convert(){
+        let money = parseInt(document.getElementById("money").value);
+        let lai = parseInt(document.getElementById("lai").value);
+        let month = parseInt(document.getElementById("month").value);
+        for (let a = 0; a <= month; a++) {
+            money= money + (money*(lai/100));
+    }
+        document.getElementById("res").innerHTML= "Result:"+ money +"VNĐ";
+    }
+
+</script>
+</body>
+</html>

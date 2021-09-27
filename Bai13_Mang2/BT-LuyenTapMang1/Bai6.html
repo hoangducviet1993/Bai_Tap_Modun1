@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<input type="text" id="num">
+<button onclick="search()">Search</button>
+<p id="res"></p>
+<script>
+    function search() {
+        let num = parseInt(document.getElementById("num").value);
+        let number = [42, -5, 54, -7, 9, 12, -2, 60, -25, -8];
+//Cách 1 dùng ham index0f :
+        if (number.indexOf(num) !== -1) {
+            document.getElementById("res").innerHTML = num + " is in the array"
+        } else {
+            document.getElementById("res").innerHTML = num + " is not in the array"
+        }
+    }
+//Cach 2 dùng vòng lặp for vs check:
+//         let check =false;
+//         for (let i = 0; i < number.length; i++) {
+//             if (number[i] === num) {
+//                 document.getElementById('res').innerHTML = num + " is in the array";
+//                 check = true
+//                 break;
+//             }
+//         }
+//         if (check === false) {
+//             document.getElementById('res').innerHTML = num + " is in not the array"
+//
+//         }
+//     }
+</script>
+</body>
+</html>

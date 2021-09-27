@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển ứng dụng mo phỏng câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        weight;
+
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            return this.weight === 0;
+
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+        getName(){
+            return this.name
+        }
+        setWeight2(weight){
+            this.weight = weight;
+        }
+        getWeight2(){
+            this.weight;
+        }
+        say(txt) {
+            console.log(txt);
+        }
+
+        eat(Apple) {
+            if (Apple.isEmpty() === false) {
+                this.weight++;
+                Apple.weight--;
+            }
+        }
+
+        checkApple(Apple) {
+            return Apple.getWeight();
+        }
+
+        getInfo() {
+            return "Tên " + this.name + " ; Giới tính " + this.gender + " Cân nặng " + this.weight;
+        }
+    }
+    let apple = new Apple();
+    let human1 = new Human("Adam","Nam",70);
+    let human2 = new Human("Eva","Nữ",50);
+    human1.say("Hello, I'm Adam ")
+    human2.say("Hi, I'm Eva ")
+       if (apple.getWeight()>0){
+           human1.eat(apple);
+           human2.eat(apple);
+       }
+    console.log(apple.weight)
+    console.log(human1.weight);
+    console.log(human2.weight);
+    document.write(human1.getInfo() +"<br>");
+    document.write(human2.getInfo());
+</script>
+</body>
+</html>

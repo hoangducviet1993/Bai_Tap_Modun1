@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age" >
+<button onclick="nhapSo()"> Nhập</button>
+<h1 id="res">Điều khiện vào lớp 10 là  từ 16 tuổi trở lên</h1>
+<script>
+    function nhapSo() {
+        let a = parseInt(document.getElementById('age').value);
+        if (a >= 16) {
+            document.getElementById('res').innerHTML = "Học Sinh đủ điều kiện vào Lớp 10"
+        } else {
+            document.getElementById('res').innerHTML = "Học Sinh không đủ điều kiện vào Lớp 10"
+        }
+    }
+</script>
+</body>
+</html>

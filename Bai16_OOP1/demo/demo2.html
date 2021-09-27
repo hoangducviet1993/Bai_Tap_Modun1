@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Student{
+      name;
+      scores;
+      constructor(name, scores ) {
+          this.name = name;
+          this.scores = scores ;
+      }
+      doHomework(bt1){
+          bt1.scores = bt1.scores + 2;
+      }
+        takeNote(bt2){
+          bt2.scores= bt2.scores +2
+        }
+        giveScore(bt3,x){
+          bt3.scores = bt3.scores + x;
+          this.scores -= x;
+        }
+    }
+    let hVien = new Student("Hoàng Việt", 10);
+    let hVien2 = new Student("Nguyễn Văn A",10);
+        hVien.giveScore(hVien2,2)
+    alert(hVien.name+"Có Scores: "+hVien.scores);
+    alert(hVien2.name+"Có Scores: "+hVien2.scores);
+</script>
+</body>
+</html>

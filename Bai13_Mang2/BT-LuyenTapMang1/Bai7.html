@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<input type="text" id="num">
+<button onclick="search()">Search</button>
+<p id="res"></p>
+<script>
+    function search() {
+        let num = parseInt(document.getElementById("num").value);
+        let number = [42, -5, 54, -7, -5, 12, -2, 60, -25, -8];
+        let b = number.indexOf(num);
+//Cách 1 dùng hàm splice để xóa :
+        if (b !== -1) {
+            number.splice(b, 1)
+            document.getElementById("res").innerHTML = number;
+        } else {
+            document.getElementById("res").innerHTML = "Số bạn tìm ko có trong mảng";
+        }
+
+//Cách 2 dùng for:
+//         if (b !== -1){
+//             for (let i = b; i < number.length; i++) {
+//                 number[i] = number[i+1];
+//             }  number.pop();
+//             number.push(0);
+//             document.getElementById("res").innerHTML = number;
+//         }else {
+//             document.getElementById("res").innerHTML = "Số bạn tìm ko có trong mảng";
+//         }
+//
+    }
+</script>
+</body>
+</html>

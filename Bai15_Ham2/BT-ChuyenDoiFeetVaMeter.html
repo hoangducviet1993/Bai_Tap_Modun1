@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đôi giữa Feet và Meter</title>
+</head>
+<body>
+<input type="text" id="txt1" placeholder="Nhập Feet">
+<button onclick="feet1()">Chuyển đổi Feet sang Meter</button>
+<br>
+<p id="res1"></p>
+<br>
+<br>
+<input type="text" id="txt2" placeholder="Nhập Meter">
+<button onclick="meter1()">Chuyển đổi Meter sang Feet</button>
+<br>
+<p id="res2"></p>
+
+<script>
+    function feet1() {
+        let a = parseInt(document.getElementById("txt1").value);
+        feetToMeter(a);
+    }
+
+    function meter1() {
+        let b = parseInt(document.getElementById("txt1").value);
+        meterToFoot(b);
+    }
+
+    function feetToMeter(feet) {
+        let meter = 0.305 * feet
+        document.getElementById("res1").innerHTML = "Meter bằng: " + meter;
+
+    }
+
+    function meterToFoot(meter) {
+        let feet = 3.279 * meter
+        document.getElementById("res2").innerHTML = "Feet bằng: " + feet
+    }
+</script>
+
+</body>
+</html>

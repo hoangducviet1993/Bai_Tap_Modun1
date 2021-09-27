@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài3</title>
+</head>
+<body>
+<input type="text" id="num1" placeholder="Number1">
+<br>
+<br>
+<input type="text" id="num2" placeholder="Number2">
+<br>
+<br>
+<button onclick="nhap()">Check</button>
+<p id="res"></p>
+
+<script>
+    function nhap() {
+        let c = parseInt(document.getElementById("num1").value);
+        let d = parseInt(document.getElementById("num2").value);
+        soSanhHaiSo(c, d)
+    }
+
+    function soSanhHaiSo(a, b) {
+        if (a > b) {
+            document.getElementById("res").innerHTML = "Số " + a + "lớn nhất";
+        } else {
+            document.getElementById("res").innerHTML = "Số " + a + "Nhỏ hơn " + b + "Tông 2 số = " + (a + b);
+        }
+    }
+</script>
+</body>
+</html>

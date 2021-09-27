@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let number = [42, 5, 54, 7, 9, 12, 2, 60, 25, 8];
+    let max = number[0]
+    let index = 0
+    for (let i = 0; i < number.length; i++) {
+        document.write(number[i] +"<br>");
+        if (number[i] > max) {
+            max = number[i];
+            index = i;
+        }
+    }
+    document.write("Só Max trong dãy là " + max + " ở vị trí" + index);
+</script>
+</body>
+</html>

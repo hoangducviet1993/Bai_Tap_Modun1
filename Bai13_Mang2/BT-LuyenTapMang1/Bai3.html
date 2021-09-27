@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let number = [42, 58, 4, 27, 9, 12, 21, 60, 25, 18];
+    let max = number[0]
+    let index = 0;
+    let count = 0;
+    let sum = 0;
+    for (let i = 0; i < number.length; i++) {
+        document.write(number[i] +"<br>");
+        sum = sum + number[i];
+        if (number[i] > max) {
+            max = number[i];
+            index = i;
+        }
+        count ++;
+    }
+    document.write("Só Max trong dãy là " + max + " ở vị trí" + index +"<br>");
+    document.write("Giá trị trung bình của dãy số: "+ sum /count );
+</script>
+</body>
+</html>

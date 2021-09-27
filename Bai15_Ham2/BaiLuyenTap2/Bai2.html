@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function area(r) {
+        let S = r * r * 3.14
+        return S;
+    }
+
+    function perimeter(r) {
+        let P = 2 * r * 3.14
+        return P;
+    }
+
+    let banKinh = parseInt(prompt("Nhập bán Kính r"));
+    document.write("Hình Tròn có bán kính: "+banKinh +" có:" +"<br>");
+    document.write("Diện tích hình tròn: " + area(banKinh) + "<br>");
+    document.write("Chu Vi Hình trong: " + perimeter(banKinh));
+</script>
+</body>
+</html>

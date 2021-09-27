@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập GamePuzzle</title>
+</head>
+<body>
+<img onclick="row1()" id="row1" src="image/row1-1.jpg" height="100" width="500"/>
+<br><br>
+<img onclick="row2()" id="row2" src="image/row2-3.jpg" height="100" width="500"/>
+<br><br>
+<img onclick="row3()" id="row3" src="image/row3-2.jpg" height="100" width="500"/>
+<br><br>
+<img onclick="row4()" id="row4" src="image/row4-1.jpg" height="100" width="500"/>
+<br><br>
+<img onclick="row5()" id="row5" src="image/row5-3.jpg" height="100" width="500"/>
+<br><br>
+<script>
+    let check1 = 1, check2 = 3, check3 = 2, check4 = 1, check5 = 3;
+
+
+    function row1() {
+        let a = Math.floor(Math.random() * 3 + 1)
+        check1 = a
+        document.getElementById("row1").src = "image/row1-" + a + ".jpg"
+        check()
+    }
+
+    function row2() {
+        let a = Math.floor(Math.random() * 3 + 1)
+        check2 = a
+        document.getElementById("row2").src = "image/row2-" + a + ".jpg"
+        check()
+    }
+
+    function row3() {
+        let a = Math.floor(Math.random() * 3 + 1)
+        check3 = a
+        document.getElementById("row3").src = "image/row3-" + a + ".jpg"
+        check()
+    }
+
+    function row4() {
+        let a = Math.floor(Math.random() * 3 + 1)
+        check4 = a
+        document.getElementById("row4").src = "image/row4-" + a + ".jpg"
+        check()
+    }
+
+    function row5() {
+        let a = Math.floor(Math.random() * 3 + 1)
+        check5 = a
+        document.getElementById("row5").src = "image/row5-" + a + ".jpg"
+        check()
+    }
+
+    function check() {
+        if (check1 === check2 && check2 === check3 && check3 === check4 && check4 === check5)
+            alert("You Win")
+    }
+
+</script>
+</body>
+
+</html>
+</body>
+</html>

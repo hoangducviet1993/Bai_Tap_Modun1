@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Từ điển</title>
+</head>
+<body>
+
+<h1>Enter Color </h1>
+<input type="text" id="txt">
+<input type="button" id="search" onclick="clicked()" value="Dịch ENG >VIE">
+<p id="res">...</p>
+<script>
+    function clicked(){
+        let search = document.getElementById("txt").value;
+        let b , c ;
+        let englísh = ["White", 'Blue', "Green", "Yellow", "Orange", "Pink", "Gray", "Red", "Black"];
+        let vietnamese = ["Trắng", "Xanh da trời", "Xanh lá cây", "Vàng", "Da cam", "Hồng", "Xám", "Đỏ", "Đen"];
+        if((b = englísh.indexOf(search))!==-1){
+            c = vietnamese[b];
+            document.getElementById("res").innerHTML = "Nghĩa của từ "+ '"' +search + '"'+ " là: "+'"'+ c+'"' ;
+        }else {
+            document.getElementById("res").innerHTML ="Không tìm thấy nghĩa của từ "+ '"' +search + '"'+ "trong từ điẻn";
+        }
+    }
+
+
+</script>
+</body>
+</html>

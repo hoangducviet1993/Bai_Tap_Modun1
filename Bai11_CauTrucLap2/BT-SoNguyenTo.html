@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Số Nguyên tố</title>
+</head>
+<body>
+<script>
+            // Hiển thị số nguyên tố trong khoảng 0- count:
+    // let count = parseInt(prompt("Nhập Số :"))
+    // for ( let number = 2; number < count ; number++) {
+    //     let check = true
+    //     for (let i = 2; i < number; i++) {
+    //         if (number % i === 0) {
+    //             check = false;
+    //             break;
+    //         }
+    //     }
+    //     if (check === true) {
+    //         document.write(number + " Là số nguyên tố" + '<br>');
+    //     }
+    // }
+// Hiện thị 20 số nguyên tố
+            let count =0;
+            let number = 2
+            let check = true
+            while (count <20) {
+                 check = true
+                for (let i = 2; i < number; i++) {
+                    if (number % i === 0) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check === true) {
+                    document.write(number + " Là số nguyên tố" + '<br>');
+                    count ++;
+                }
+                number++;
+            }
+
+</script>
+</body>
+</html>

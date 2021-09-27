@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" id="check1" oninput="check('check2')"> Good <br>
+<input type="checkbox" id="check2" oninput="check('check3')">Cheap <br>
+<input type="checkbox" id="check3" oninput="check('check1')"> Fast <br>
+
+<script>
+    function check(id){
+    let a =document.getElementById('check1').checked;
+    let b =document.getElementById('check2').checked;
+    let c =document.getElementById('check3').checked;
+        if (a==b==c==true){
+            document.getElementById(id).checked = false
+        }
+
+    // if ((document.getElementById("check1").checked==document.getElementById("check2").checked==document.getElementById("check3").checked==true))
+    // {
+    //     document.getElementById(id).checked=false
+    // }
+    }
+
+
+</script>
+
+</body>
+</html>

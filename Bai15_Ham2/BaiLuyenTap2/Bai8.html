@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    function change(number ) {
+        num=number.reverse()
+        document.write("Dãy số đảo ngược: "+num)
+    }
+    let numberSequence =[]
+    for (let j = 0; j <10; j++) {
+        numberSequence[j]=parseInt(prompt("Nhập Giá trị thứ "+(j+1)));
+    }
+    document.write("Dãy số nhập là: " +numberSequence );
+    change(numberSequence);
+
+</script>
+</body>
+</html>

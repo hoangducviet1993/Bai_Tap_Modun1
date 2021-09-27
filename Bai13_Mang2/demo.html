@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [1, 4, 7, 2, 8, 12, 3, 5, 9];
+    for (let i = 0; i < num.length; i++) {
+        document.write(num[i] + "<br>");
+    }
+    document.write("<hr>");
+
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] % 3 === 0) {
+            document.write(num[i] + '<br>');
+        }
+    }
+    document.write("<hr>");
+    let count =0;
+    let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] % 4 === 0) {
+            document.write(num[i] + '<br>');
+            sum = sum +num [i];
+            count ++;
+        }
+        TB = sum/count;
+    }
+    document.write ("Tổng các số chia hết cho 4: "+ sum +"<br>");
+    document.write("Số phần tử chia hết cho 4 trong mảng: "+ count +"<br>");
+    document.write("Trung bình tổng chia hết cho 4: " +TB )
+
+</script>
+</body>
+</html>

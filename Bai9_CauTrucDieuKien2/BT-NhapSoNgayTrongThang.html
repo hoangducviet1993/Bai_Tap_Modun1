@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiện  số ngày trong tháng</title>
+</head>
+<body>
+<input id="thang" type="text" ">
+<button onclick="soNgay()"> Tính Số Ngày </button>
+<h1 id="res">Res:</h1>
+
+<script>
+    function soNgay() {
+            let thang = +document.getElementById('thang').value;
+            let res = '';
+            // if (thang < 1 || thang>12){
+            //     res = 'Nhập lại số tháng trong năm (từ 1 đến 12)';
+            // }
+            switch (thang){
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    res += "tháng " + thang + " có 30 ngày";
+                    break;
+                case 2:
+                    res += 'thang ' + thang + " co 28 ngày hoặc 29 ngày";
+                    break;
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    res += 'thang ' + thang + " co 31 ngày"
+                    break;
+                default:
+                    res = 'Nhập lại số tháng trong năm (từ 1 đến 12)'
+            }
+            document.getElementById('res').innerHTML = res;
+    }
+</script>
+</body>
+</html>

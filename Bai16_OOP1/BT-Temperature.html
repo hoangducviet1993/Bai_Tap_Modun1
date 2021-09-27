@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        doC;
+
+        constructor(nhietDoC) {
+            this.doC = nhietDoC;
+        }
+
+        doiSangDoF() {
+            return 9 / 5 * this.doC + 32;
+        }
+
+        doiSangDoK() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let temp = new Temperature(25)
+    document.write("Nhiệt độ được chuyển sang độ F = " + temp.doiSangDoF() + "<br>");
+    document.write("Nhiệt độ được chuyển sang độ Kenvin = " + temp.doiSangDoK());
+
+</script>
+</body>
+</html>

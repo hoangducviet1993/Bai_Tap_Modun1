@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị tổng 20 số đầu tiên trong dãy fibonacci </title>
+</head>
+<body>
+<script>
+
+    let count = parseInt(prompt("Nhập số lượng cần thiển thị:"));
+    let a = 0
+    let b = 1
+    document.write('Dãy số cần tìm là:' + "<br>");
+    let sum = 0
+    for (let i = 1; i <= count; i++) {
+        document.write(b + "<br>");
+        sum = sum + b;
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+    document.write("Tổng của " + count + "số đầu tiên trong dãy số fibonacci :" + sum);
+
+</script>
+</body>
+</html>

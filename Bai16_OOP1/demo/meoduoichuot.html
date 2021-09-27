@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        class Cat{
+            ten;
+            mau;
+            constructor(ten) {
+                this.ten = ten;
+                this.mau = 100;
+            }
+            cao(bt1){
+                bt1.mau -= 1
+            }
+            // biLua(){
+            //     this.mau -=2
+            // }
+            guithongtin(){
+                return "Máu của "+ this.ten +" còn "+ this.mau;
+            }
+
+        } class Chuot{
+            ten;
+            mau;
+            constructor(ten2) {
+                this.ten = ten2;
+                this.mau = 100;
+            }
+            lua(bt2){
+                bt2.mau -= 2
+            }
+            // biCao(){
+            //     thi.mau -= 1
+            // }
+            guithongtin(){
+                return "Máu của "+ this.ten +" còn "+ this.mau;
+            }
+
+        }
+        let tom = new Cat("Tom");
+        let oggy = new Cat("Oggy");
+        let jerry = new Chuot("Jerry")
+        tom.cao(jerry) ;
+        oggy.cao(jerry);
+        jerry.lua(tom);
+        alert(jerry.guithongtin());
+        alert(tom.guithongtin());
+        alert(oggy.guithongtin());
+
+</script>
+</body>
+</html>

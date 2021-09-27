@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiệt độ cơ thể</title>
+</head>
+<body>
+<script>
+let temperatyre;
+    do {
+         temperatyre=parseInt(prompt("Nhập Nhiệt độ"));
+    if (temperatyre > 100){
+     alert("Nhiệt độ cao hơn 100 yêu cầu giảm nhiệt độ");
+    }
+    if(temperatyre<20){
+        alert("Nhiệt độ thấp hơn 20 yêu cầu tăng độ");
+    }
+    } while ( temperatyre < 20 || temperatyre >100 );
+
+ document.write("Nhiệt độ cơ thể :" + temperatyre );
+
+</script>
+</body>
+</html>

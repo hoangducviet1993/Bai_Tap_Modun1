@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<input type="text" id="txt">
+<button onclick="check()">Input</button>
+<br>
+<p id="res2"></p>
+<p id="res"></p>
+<script>
+    let a = [];
+
+    function check() {
+        let count = 0;
+        let text = document.getElementById("txt").value;
+        a.push(text);
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 1 ===0) {
+                count++
+            }
+        }
+        document.getElementById('res2').innerHTML = a +"có khích thước là "+a.length+ " phần tử " ;
+        document.getElementById('res').innerHTML = "Thêm " + text + " vào mảng" + "<br>" + "Có " + count +" phần tử là số";
+        document.getElementById('txt').value = "";
+    }
+</script>
+</body>
+</html>

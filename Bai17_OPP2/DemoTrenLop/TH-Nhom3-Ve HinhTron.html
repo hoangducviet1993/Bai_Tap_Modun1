@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình tròn</title>
+</head>
+<canvas id="myCanvas" width="1000" height="800" style="border: 1px solid "></canvas>
+<body>
+<script>
+    class Circle {
+        x;
+        y;
+        radius;
+        color;
+        constructor(x,y,radius,color) {
+            this.x =x;
+            this.y =y;
+            this.radius = radius;
+            this.color =color;
+        }
+        getRadius() {
+            return this.radius;
+        }
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+        daw() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+    function getRandomColor(){
+        let red = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+    function createMultipleCircle() {
+        for (let i = 0; i < 10; i++) {
+            let x = Math.random() * window.innerWidth;;
+            let y =Math.random() * window.innerHeight;
+            let radius = Math.floor(Math.random() * 80);
+            let color = getRandomColor();
+            let circle = new Circle(x ,y, radius,color);
+            circle.daw();
+        }
+    }
+createMultipleCircle()
+
+</script>
+
+</body>
+</html>

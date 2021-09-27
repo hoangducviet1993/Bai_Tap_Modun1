@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    let zodiac1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', '  Regulus']
+    let zodiac2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+    function checkStar(str) {
+        for (let i = 0; i < zodiac1.length; i++) {
+            if (str === zodiac1[i]) {
+                document.write("Thuộc nhóm " + zodiac1 + "vị trí thứ " + zodiac1.indexOf(str));
+                return;
+            } else if (str === zodiac2[i]) {
+                document.write('Thuộc nhóm ' + zodiac2 + 'vị trí thứ ' + zodiac2.indexOf(str));
+                return;
+            }
+
+        }
+        document.write('Không tìm thấy từ tìm kiếm');
+    }
+
+    checkStar(prompt('Nhập tròm sao muốn tìm'));
+</script>
+</body>
+</html>
