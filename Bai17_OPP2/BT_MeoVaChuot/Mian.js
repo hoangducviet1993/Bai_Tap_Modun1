@@ -8,8 +8,8 @@ console.log(rat.weight);
 console.log(rat.health);
 console.log(rat.speed);
 if (cat.catch(rat) === true){
-    cat.eat(rat);
     cat.setSpeed(rat.weight);
+    cat.eat(rat);
 }
 console.log(cat.name);
 console.log(cat.weight);
